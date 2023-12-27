@@ -6,8 +6,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **inverter** | [**DataSolarInverter**](DataSolarInverter.md) |  | 
-**pac** | **float** |  | 
-**pdc** | **float** |  | 
+**pac** | **float** |  | [optional] 
+**pdc** | **float** |  | [optional] 
 **temperature** | **float** |  | [optional] 
 **time** | **str** |  | 
 

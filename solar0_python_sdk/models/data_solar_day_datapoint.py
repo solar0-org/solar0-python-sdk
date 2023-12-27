@@ -18,7 +18,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import Any, ClassVar, Dict, List, Union
+from typing import Any, ClassVar, Dict, List, Optional, Union
 from pydantic import BaseModel, StrictFloat, StrictInt, StrictStr
 from solar0_python_sdk.models.data_solar_inverter import DataSolarInverter
 try:
@@ -31,8 +31,8 @@ class DataSolarDayDatapoint(BaseModel):
     DataSolarDayDatapoint
     """ # noqa: E501
     inverter: DataSolarInverter
-    pac: Union[StrictFloat, StrictInt]
-    pdc: Union[StrictFloat, StrictInt]
+    pac: Optional[Union[StrictFloat, StrictInt]] = None
+    pdc: Optional[Union[StrictFloat, StrictInt]] = None
     time: StrictStr
     __properties: ClassVar[List[str]] = ["inverter", "pac", "pdc", "time"]
 

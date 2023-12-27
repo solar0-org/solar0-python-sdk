@@ -31,8 +31,8 @@ class DataSolarMinDatapoint(BaseModel):
     DataSolarMinDatapoint
     """ # noqa: E501
     inverter: DataSolarInverter
-    pac: Union[StrictFloat, StrictInt]
-    pdc: Union[StrictFloat, StrictInt]
+    pac: Optional[Union[StrictFloat, StrictInt]] = None
+    pdc: Optional[Union[StrictFloat, StrictInt]] = None
     temperature: Optional[Union[StrictFloat, StrictInt]] = None
     time: StrictStr
     __properties: ClassVar[List[str]] = ["inverter", "pac", "pdc", "temperature", "time"]
