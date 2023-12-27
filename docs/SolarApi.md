@@ -5,6 +5,7 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**solar_day_post**](SolarApi.md#solar_day_post) | **POST** /solar/day | Add day data to influxdb
+[**solar_last_record_get**](SolarApi.md#solar_last_record_get) | **GET** /solar/last-record | Get last record
 [**solar_min_post**](SolarApi.md#solar_min_post) | **POST** /solar/min | Add minute data to influxdb
 
 
@@ -75,6 +76,74 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **solar_last_record_get**
+> DataSolarDayDatapoint solar_last_record_get(tenant)
+
+Get last record
+
+### Example
+
+
+```python
+import time
+import os
+import solar0_python_sdk
+from solar0_python_sdk.models.data_solar_day_datapoint import DataSolarDayDatapoint
+from solar0_python_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = solar0_python_sdk.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+with solar0_python_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = solar0_python_sdk.SolarApi(api_client)
+    tenant = 'tenant_example' # str | Tenant
+
+    try:
+        # Get last record
+        api_response = api_instance.solar_last_record_get(tenant)
+        print("The response of SolarApi->solar_last_record_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling SolarApi->solar_last_record_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tenant** | **str**| Tenant | 
+
+### Return type
+
+[**DataSolarDayDatapoint**](DataSolarDayDatapoint.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

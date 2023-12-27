@@ -87,6 +87,7 @@ All URIs are relative to *http://localhost*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *SolarApi* | [**solar_day_post**](docs/SolarApi.md#solar_day_post) | **POST** /solar/day | Add day data to influxdb
+*SolarApi* | [**solar_last_record_get**](docs/SolarApi.md#solar_last_record_get) | **GET** /solar/last-record | Get last record
 *SolarApi* | [**solar_min_post**](docs/SolarApi.md#solar_min_post) | **POST** /solar/min | Add minute data to influxdb
 
 
