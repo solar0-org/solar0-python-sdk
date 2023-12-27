@@ -280,9 +280,11 @@ class SolarApi:
         _body_params: Optional[bytes] = None
 
         # process the path parameters
-        if tenant is not None:
-            _path_params['tenant'] = tenant
         # process the query parameters
+        if tenant is not None:
+            
+            _query_params.append(('tenant', tenant))
+            
         # process the header parameters
         # process the form parameters
         # process the body parameter
@@ -549,9 +551,11 @@ class SolarApi:
         _body_params: Optional[bytes] = None
 
         # process the path parameters
-        if tenant is not None:
-            _path_params['tenant'] = tenant
         # process the query parameters
+        if tenant is not None:
+            
+            _query_params.append(('tenant', tenant))
+            
         # process the header parameters
         # process the form parameters
         # process the body parameter
@@ -817,9 +821,11 @@ class SolarApi:
         _body_params: Optional[bytes] = None
 
         # process the path parameters
-        if tenant is not None:
-            _path_params['tenant'] = tenant
         # process the query parameters
+        if tenant is not None:
+            
+            _query_params.append(('tenant', tenant))
+            
         # process the header parameters
         # process the form parameters
         # process the body parameter
