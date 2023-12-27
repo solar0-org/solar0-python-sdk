@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **solar_day_post**
-> DataSolarDayDatapoint solar_day_post(tenant, request)
+> List[DataSolarDayDatapoint] solar_day_post(tenant, request)
 
 Add day data to influxdb
 
@@ -36,7 +36,7 @@ with solar0_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = solar0_python_sdk.SolarApi(api_client)
     tenant = 'tenant_example' # str | Tenant
-    request = solar0_python_sdk.DataSolarDayDatapoint() # DataSolarDayDatapoint | Request
+    request = [solar0_python_sdk.DataSolarDayDatapoint()] # List[DataSolarDayDatapoint] | Request
 
     try:
         # Add day data to influxdb
@@ -55,11 +55,11 @@ with solar0_python_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tenant** | **str**| Tenant | 
- **request** | [**DataSolarDayDatapoint**](DataSolarDayDatapoint.md)| Request | 
+ **request** | [**List[DataSolarDayDatapoint]**](DataSolarDayDatapoint.md)| Request | 
 
 ### Return type
 
-[**DataSolarDayDatapoint**](DataSolarDayDatapoint.md)
+[**List[DataSolarDayDatapoint]**](DataSolarDayDatapoint.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **solar_min_post**
-> DataSolarMinDatapoint solar_min_post(tenant, request)
+> List[DataSolarMinDatapoint] solar_min_post(tenant, request)
 
 Add minute data to influxdb
 
@@ -106,7 +106,7 @@ with solar0_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = solar0_python_sdk.SolarApi(api_client)
     tenant = 'tenant_example' # str | Tenant
-    request = solar0_python_sdk.DataSolarMinDatapoint() # DataSolarMinDatapoint | Request
+    request = [solar0_python_sdk.DataSolarMinDatapoint()] # List[DataSolarMinDatapoint] | Request
 
     try:
         # Add minute data to influxdb
@@ -125,11 +125,11 @@ with solar0_python_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tenant** | **str**| Tenant | 
- **request** | [**DataSolarMinDatapoint**](DataSolarMinDatapoint.md)| Request | 
+ **request** | [**List[DataSolarMinDatapoint]**](DataSolarMinDatapoint.md)| Request | 
 
 ### Return type
 
-[**DataSolarMinDatapoint**](DataSolarMinDatapoint.md)
+[**List[DataSolarMinDatapoint]**](DataSolarMinDatapoint.md)
 
 ### Authorization
 

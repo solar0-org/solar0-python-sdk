@@ -1,7 +1,6 @@
 .github/workflows/python.yml
 .gitignore
 .gitlab-ci.yml
-.openapi-generator-ignore
 .travis.yml
 README.md
 docs/DataSolarDayDatapoint.md
@@ -28,8 +27,4 @@ solar0_python_sdk/py.typed
 solar0_python_sdk/rest.py
 test-requirements.txt
 test/__init__.py
-test/test_data_solar_day_datapoint.py
-test/test_data_solar_inverter.py
-test/test_data_solar_min_datapoint.py
-test/test_solar_api.py
 tox.ini

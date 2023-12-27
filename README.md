@@ -68,7 +68,7 @@ with solar0_python_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = solar0_python_sdk.SolarApi(api_client)
     tenant = 'tenant_example' # str | Tenant
-    request = solar0_python_sdk.DataSolarDayDatapoint() # DataSolarDayDatapoint | Request
+    request = [solar0_python_sdk.DataSolarDayDatapoint()] # List[DataSolarDayDatapoint] | Request
 
     try:
         # Add day data to influxdb

@@ -27,6 +27,8 @@ from pydantic import Field
 from typing_extensions import Annotated
 from pydantic import StrictStr
 
+from typing import List
+
 from solar0_python_sdk.models.data_solar_day_datapoint import DataSolarDayDatapoint
 from solar0_python_sdk.models.data_solar_min_datapoint import DataSolarMinDatapoint
 
@@ -52,7 +54,7 @@ class SolarApi:
     def solar_day_post(
         self,
         tenant: Annotated[StrictStr, Field(description="Tenant")],
-        request: Annotated[DataSolarDayDatapoint, Field(description="Request")],
+        request: Annotated[List[DataSolarDayDatapoint], Field(description="Request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -65,14 +67,14 @@ class SolarApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> DataSolarDayDatapoint:
+    ) -> List[DataSolarDayDatapoint]:
         """Add day data to influxdb
 
 
         :param tenant: Tenant (required)
         :type tenant: str
         :param request: Request (required)
-        :type request: DataSolarDayDatapoint
+        :type request: List[DataSolarDayDatapoint]
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -105,7 +107,7 @@ class SolarApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "DataSolarDayDatapoint",
+            '201': "List[DataSolarDayDatapoint]",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -122,7 +124,7 @@ class SolarApi:
     def solar_day_post_with_http_info(
         self,
         tenant: Annotated[StrictStr, Field(description="Tenant")],
-        request: Annotated[DataSolarDayDatapoint, Field(description="Request")],
+        request: Annotated[List[DataSolarDayDatapoint], Field(description="Request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -135,14 +137,14 @@ class SolarApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[DataSolarDayDatapoint]:
+    ) -> ApiResponse[List[DataSolarDayDatapoint]]:
         """Add day data to influxdb
 
 
         :param tenant: Tenant (required)
         :type tenant: str
         :param request: Request (required)
-        :type request: DataSolarDayDatapoint
+        :type request: List[DataSolarDayDatapoint]
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -175,7 +177,7 @@ class SolarApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "DataSolarDayDatapoint",
+            '201': "List[DataSolarDayDatapoint]",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -192,7 +194,7 @@ class SolarApi:
     def solar_day_post_without_preload_content(
         self,
         tenant: Annotated[StrictStr, Field(description="Tenant")],
-        request: Annotated[DataSolarDayDatapoint, Field(description="Request")],
+        request: Annotated[List[DataSolarDayDatapoint], Field(description="Request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -212,7 +214,7 @@ class SolarApi:
         :param tenant: Tenant (required)
         :type tenant: str
         :param request: Request (required)
-        :type request: DataSolarDayDatapoint
+        :type request: List[DataSolarDayDatapoint]
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -245,7 +247,7 @@ class SolarApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "DataSolarDayDatapoint",
+            '201': "List[DataSolarDayDatapoint]",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -267,6 +269,7 @@ class SolarApi:
         _host = None
 
         _collection_formats: Dict[str, str] = {
+            'request': '',
         }
 
         _path_params: Dict[str, str] = {}
@@ -334,7 +337,7 @@ class SolarApi:
     def solar_min_post(
         self,
         tenant: Annotated[StrictStr, Field(description="Tenant")],
-        request: Annotated[DataSolarMinDatapoint, Field(description="Request")],
+        request: Annotated[List[DataSolarMinDatapoint], Field(description="Request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -347,14 +350,14 @@ class SolarApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> DataSolarMinDatapoint:
+    ) -> List[DataSolarMinDatapoint]:
         """Add minute data to influxdb
 
 
         :param tenant: Tenant (required)
         :type tenant: str
         :param request: Request (required)
-        :type request: DataSolarMinDatapoint
+        :type request: List[DataSolarMinDatapoint]
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -387,7 +390,7 @@ class SolarApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "DataSolarMinDatapoint",
+            '201': "List[DataSolarMinDatapoint]",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -404,7 +407,7 @@ class SolarApi:
     def solar_min_post_with_http_info(
         self,
         tenant: Annotated[StrictStr, Field(description="Tenant")],
-        request: Annotated[DataSolarMinDatapoint, Field(description="Request")],
+        request: Annotated[List[DataSolarMinDatapoint], Field(description="Request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -417,14 +420,14 @@ class SolarApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[DataSolarMinDatapoint]:
+    ) -> ApiResponse[List[DataSolarMinDatapoint]]:
         """Add minute data to influxdb
 
 
         :param tenant: Tenant (required)
         :type tenant: str
         :param request: Request (required)
-        :type request: DataSolarMinDatapoint
+        :type request: List[DataSolarMinDatapoint]
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -457,7 +460,7 @@ class SolarApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "DataSolarMinDatapoint",
+            '201': "List[DataSolarMinDatapoint]",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -474,7 +477,7 @@ class SolarApi:
     def solar_min_post_without_preload_content(
         self,
         tenant: Annotated[StrictStr, Field(description="Tenant")],
-        request: Annotated[DataSolarMinDatapoint, Field(description="Request")],
+        request: Annotated[List[DataSolarMinDatapoint], Field(description="Request")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -494,7 +497,7 @@ class SolarApi:
         :param tenant: Tenant (required)
         :type tenant: str
         :param request: Request (required)
-        :type request: DataSolarMinDatapoint
+        :type request: List[DataSolarMinDatapoint]
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -527,7 +530,7 @@ class SolarApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "DataSolarMinDatapoint",
+            '201': "List[DataSolarMinDatapoint]",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -549,6 +552,7 @@ class SolarApi:
         _host = None
 
         _collection_formats: Dict[str, str] = {
+            'request': '',
         }
 
         _path_params: Dict[str, str] = {}
