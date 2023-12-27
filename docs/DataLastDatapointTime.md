@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**time** | **str** |  | [optional] 
+**time** | **str** |  | 
 
 ## Example
 

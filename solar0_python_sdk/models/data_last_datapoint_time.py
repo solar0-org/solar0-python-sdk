@@ -18,7 +18,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import Any, ClassVar, Dict, List, Optional
+from typing import Any, ClassVar, Dict, List
 from pydantic import BaseModel, StrictStr
 try:
     from typing import Self
@@ -29,7 +29,7 @@ class DataLastDatapointTime(BaseModel):
     """
     DataLastDatapointTime
     """ # noqa: E501
-    time: Optional[StrictStr] = None
+    time: StrictStr
     __properties: ClassVar[List[str]] = ["time"]
 
     model_config = {

@@ -29,5 +29,4 @@ solar0_python_sdk/py.typed
 solar0_python_sdk/rest.py
 test-requirements.txt
 test/__init__.py
-test/test_data_last_datapoint_time.py
 tox.ini
