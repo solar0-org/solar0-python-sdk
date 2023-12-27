@@ -29,6 +29,7 @@ from pydantic import StrictStr
 
 from typing import List
 
+from solar0_python_sdk.models.data_last_datapoint_time import DataLastDatapointTime
 from solar0_python_sdk.models.data_solar_day_datapoint import DataSolarDayDatapoint
 from solar0_python_sdk.models.data_solar_min_datapoint import DataSolarMinDatapoint
 
@@ -351,7 +352,7 @@ class SolarApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> DataSolarDayDatapoint:
+    ) -> DataLastDatapointTime:
         """Get last record
 
 
@@ -388,7 +389,7 @@ class SolarApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "DataSolarDayDatapoint",
+            '200': "DataLastDatapointTime",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -417,7 +418,7 @@ class SolarApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[DataSolarDayDatapoint]:
+    ) -> ApiResponse[DataLastDatapointTime]:
         """Get last record
 
 
@@ -454,7 +455,7 @@ class SolarApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "DataSolarDayDatapoint",
+            '200': "DataLastDatapointTime",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -520,7 +521,7 @@ class SolarApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "DataSolarDayDatapoint",
+            '200': "DataLastDatapointTime",
         }
         response_data = self.api_client.call_api(
             *_param,

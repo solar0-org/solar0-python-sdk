@@ -80,7 +80,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **solar_last_record_get**
-> DataSolarDayDatapoint solar_last_record_get(tenant)
+> DataLastDatapointTime solar_last_record_get(tenant)
 
 Get last record
 
@@ -91,7 +91,7 @@ Get last record
 import time
 import os
 import solar0_python_sdk
-from solar0_python_sdk.models.data_solar_day_datapoint import DataSolarDayDatapoint
+from solar0_python_sdk.models.data_last_datapoint_time import DataLastDatapointTime
 from solar0_python_sdk.rest import ApiException
 from pprint import pprint
 
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataSolarDayDatapoint**](DataSolarDayDatapoint.md)
+[**DataLastDatapointTime**](DataLastDatapointTime.md)
 
 ### Authorization
 

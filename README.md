@@ -93,6 +93,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [DataLastDatapointTime](docs/DataLastDatapointTime.md)
  - [DataSolarDayDatapoint](docs/DataSolarDayDatapoint.md)
  - [DataSolarInverter](docs/DataSolarInverter.md)
  - [DataSolarMinDatapoint](docs/DataSolarMinDatapoint.md)

@@ -14,6 +14,7 @@
 
 
 # import models into model package
+from solar0_python_sdk.models.data_last_datapoint_time import DataLastDatapointTime
 from solar0_python_sdk.models.data_solar_day_datapoint import DataSolarDayDatapoint
 from solar0_python_sdk.models.data_solar_inverter import DataSolarInverter
 from solar0_python_sdk.models.data_solar_min_datapoint import DataSolarMinDatapoint
