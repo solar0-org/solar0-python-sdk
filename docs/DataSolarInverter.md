@@ -5,10 +5,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**description** | **str** |  | [optional] 
 **group** | **str** |  | [optional] 
-**id** | **str** |  | [optional] 
-**name** | **str** |  | 
+**id** | **str** |  | 
+**name** | **str** |  | [optional] 
 **power** | **float** |  | [optional] 
+**serial_id** | **str** |  | [optional] 
 
 ## Example
 

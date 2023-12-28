@@ -29,11 +29,13 @@ class DataSolarInverter(BaseModel):
     """
     DataSolarInverter
     """ # noqa: E501
+    description: Optional[StrictStr] = None
     group: Optional[StrictStr] = None
-    id: Optional[StrictStr] = None
-    name: StrictStr
+    id: StrictStr
+    name: Optional[StrictStr] = None
     power: Optional[Union[StrictFloat, StrictInt]] = None
-    __properties: ClassVar[List[str]] = ["group", "id", "name", "power"]
+    serial_id: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["description", "group", "id", "name", "power", "serial_id"]
 
     model_config = {
         "populate_by_name": True,
@@ -84,10 +86,12 @@ class DataSolarInverter(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "description": obj.get("description"),
             "group": obj.get("group"),
             "id": obj.get("id"),
             "name": obj.get("name"),
-            "power": obj.get("power")
+            "power": obj.get("power"),
+            "serial_id": obj.get("serial_id")
         })
         return _obj
 
